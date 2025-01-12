@@ -1,0 +1,354 @@
+/* Global styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #1a1a1a, #222);
+    color: white;
+}
+
+/* Header - navigation bar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+/* Updated navbar brand styles with hover effects and professional font */
+.navbar-brand {
+    font-size: 1.8rem; /* Slightly larger font size for better visibility */
+    font-family: 'Roboto', sans-serif; /* Professional, modern font */
+    font-weight: 600; /* Semi-bold for better emphasis */
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s, transform 0.3s, letter-spacing 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the navbar brand */
+.navbar-brand:hover {
+    color: #e50914; /* Red color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+    letter-spacing: 3px; /* Increased letter spacing for a more spacious feel */
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3); /* Subtle shadow for depth */
+}
+
+/* Optional: Add a "glow" effect to the text */
+.navbar-brand:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    animation: glowing 1.5s infinite ease-in-out;
+    opacity: 0.7;
+    border-radius: 5px;
+}
+
+/* Keyframe for the glowing effect */
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+}
+
+
+/* Center the navbar container */
+.navbar-container {
+    max-width: 1100px; /* Reduced width to make it more compact */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 8px; /* Reduced space between items */
+}
+
+.nav-link {
+    font-size: 0.85rem; /* Slightly smaller font size */
+    color: #fff !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    padding: 8px 12px;
+    transition: color 0.3s, transform 0.3s ease, letter-spacing 0.3s ease;
+    text-decoration: none
+}
+
+.nav-link:hover {
+    color: #e50914 !important;
+    text-decoration: none;
+    transform: scale(1.1); /* Subtle scale effect */
+    letter-spacing: 1.2px; /* Slight increase in spacing on hover */
+}
+
+/* Navbar Menu in Mobile View */
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+/* Make sure the navigation bar stays on top when scrolling */
+body {
+    padding-top: 60px; /* Adjust this based on navbar height */
+}
+
+/* Introduction Section */
+#introduction {
+    padding: 80px 15px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 70px;
+    transition: background-color 0.3s ease;
+}
+
+#introduction h2 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+#introduction p {
+    font-size: 1.1rem;
+    color: #bbb;
+}
+
+#introduction:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Darken background on hover */
+}
+
+/* Sections */
+section {
+    padding: 60px 15px;
+    transition: background-color 0.3s ease;
+}
+
+section:hover {
+    background-color: rgba(0, 0, 0, 0.6); /* Darken the section on hover */
+}
+
+h2 {
+    font-size: 2rem;
+    color: #e50914;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Cards/Images in Projects */
+/* Projects Section */
+#projects {
+    padding: 60px 15px;
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background for a sleek look */
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#projects:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background on hover */
+}
+
+/* Heading */
+#projects h2 {
+    font-size: 2.5rem;
+    color: #e50914;
+    margin-bottom: 20px;
+}
+
+#projects p {
+    color: #bbb;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+/* Cards */
+.project-card {
+    background: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Lift the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+.project-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+.project-card h5 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+/* GitHub Button */
+#projects a {
+    font-size: 1rem;
+    color: #e50914;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #e50914;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#projects a:hover {
+    background-color: #e50914;
+    color: #fff;
+}
+
+/* Contact Section */
+#contact a {
+    color: #e50914;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#contact a:hover {
+    color: #fff;
+    text-decoration: underline;
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #bbb;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #e50914;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+}
+
+/* Profile Section */
+#profile {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px 15px;
+    text-align: center;
+    margin-top: 100px; /* Adjust the top margin if necessary */
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px; /* Set the width of the image */
+    height: 150px; /* Make it a circle */
+    border-radius: 50%; /* Make it round */
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
+    border: 4px solid #e50914; /* Optional: Adds a border for a nice effect */
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); /* Optional: Adds a glowing effect around the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); /* Stronger glowing effect */
+}
+
+.profile-info h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 1.1rem;
+    color: #bbb;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Styling for mobile view */
+@media (max-width: 768px) {
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .profile-info p {
+        font-size: 1rem;
+    }
+}
